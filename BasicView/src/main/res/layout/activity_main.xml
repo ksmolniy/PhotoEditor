@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="by.ksmolniy.photoeditor.MainActivity">
+
+    <Button
+        android:text="Сделать фото"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:background="@color/colorAccent"
+        android:onClick="photoClick"
+        />
+
+    <Button
+        android:text="Выбрать фото из галереи"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:textColor="#fff"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/button"
+        android:background="@color/colorAccent"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:onClick="galleryPickClick"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/background"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageView3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Для начала работы выберите фото из галереи или сделайте фото из приложения"
+        android:layout_width="300dp"
+        android:alpha="0.85"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="by.ksmolniy.photoeditor.FinishActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView2"
+        android:scaleType="centerCrop"
+        />
+
+    <Button
+        android:text="Поделится"
+        android:layout_width="120dp"
+        android:textColor="@color/textColor"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/surfaceView"
+        android:layout_alignStart="@+id/surfaceView"
+        android:layout_marginBottom="19dp" />
+
+    <Button
+        android:text="Продолжить"
+        android:textColor="@color/textColor"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:id="@+id/button4"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignRight="@+id/surfaceView"
+        android:layout_alignEnd="@+id/surfaceView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="38dp"
+        android:id="@+id/imageView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <SurfaceView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/surfaceView"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp" />
+
+
+</RelativeLayout>
