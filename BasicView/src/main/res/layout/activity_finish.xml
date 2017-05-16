@@ -19,46 +19,50 @@
         android:scaleType="centerCrop"
         />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView4"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/finishImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <Button
+        android:text="Сохранить"
+        android:textColor="@color/textColor"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:id="@+id/saveButton"
+        android:layout_below="@+id/finishImageView"
+        android:layout_alignLeft="@+id/finishImageView"
+        android:layout_alignStart="@+id/finishImageView"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="38dp" />
+
     <Button
         android:text="Поделится"
         android:layout_width="120dp"
         android:textColor="@color/textColor"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/shareButton"
         android:background="@color/colorAccent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/surfaceView"
-        android:layout_alignStart="@+id/surfaceView"
-        android:layout_marginBottom="19dp" />
-
-    <Button
-        android:text="Продолжить"
-        android:textColor="@color/textColor"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:id="@+id/button4"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignRight="@+id/surfaceView"
-        android:layout_alignEnd="@+id/surfaceView" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
-        android:layout_marginTop="38dp"
-        android:id="@+id/imageView4"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <SurfaceView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:id="@+id/surfaceView"
-        android:layout_above="@+id/button3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp" />
+        android:layout_alignBaseline="@+id/saveButton"
+        android:layout_alignBottom="@+id/saveButton"
+        android:layout_alignRight="@+id/finishImageView"
+        android:layout_alignEnd="@+id/finishImageView"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp" />
 
 
 </RelativeLayout>

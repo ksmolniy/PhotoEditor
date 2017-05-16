@@ -79,8 +79,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         // return final image
         return bmOut;
@@ -133,8 +133,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bmOut;
     }
@@ -180,8 +180,8 @@ public class BitmapProcessing {
         Bitmap bmOut = Bitmap.createBitmap(width, height, source.getConfig());
         bmOut.setPixels(pixels, 0, width, 0, 0, width, height);
 
-        source.recycle();
-        source = null;
+//        source.recycle();
+//        source = null;
 
         return bmOut;
     }
@@ -225,8 +225,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bmOut;
     }
@@ -273,8 +273,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bmOut;
     }
@@ -328,8 +328,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         // return final image
         return bmOut;
@@ -385,8 +385,8 @@ public class BitmapProcessing {
                 bmOut.setPixel(x, y, Color.argb(A, R, G, B));
             }
         }
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
         return bmOut;
     }
 
@@ -407,8 +407,8 @@ public class BitmapProcessing {
         paint.setColorFilter(filter);
         canvasResult.drawBitmap(src, 0, 0, paint);
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bitmapResult;
     }
@@ -436,8 +436,8 @@ public class BitmapProcessing {
         paint.setColorFilter(filter);
         canvasResult.drawBitmap(src, 0, 0, paint);
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bitmapResult;
     }
@@ -489,8 +489,8 @@ public class BitmapProcessing {
             }
         }
 
-        bitmap.recycle();
-        bitmap = null;
+//        bitmap.recycle();
+//        bitmap = null;
 
         return newBitmap;
     }
@@ -512,8 +512,8 @@ public class BitmapProcessing {
         c.setBitmap(bmOut);
         c.drawBitmap(src, 0, 0, p);
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bmOut;
     }
@@ -538,8 +538,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return output;
     }
@@ -578,8 +578,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return bmOut;
     }
@@ -627,8 +627,8 @@ public class BitmapProcessing {
             }
         }
 
-        src.recycle();
-        src = null;
+//        src.recycle();
+//        src = null;
 
         return result;
     }
@@ -656,6 +656,14 @@ public class BitmapProcessing {
             default:
                 return bitmap;
         }
+    }
+
+    public static Bitmap overlay(Bitmap bmp1, Bitmap bmp2) {
+        Bitmap bmOverlay = Bitmap.createBitmap(bmp1.getWidth(), bmp1.getHeight(), bmp1.getConfig());
+        Canvas canvas = new Canvas(bmOverlay);
+        canvas.drawBitmap(bmp1, new Matrix(), null);
+        canvas.drawBitmap(bmp2, 0, 0, null);
+        return bmOverlay;
     }
 
 }
